@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    { "src": "/(css|js|images)/(.*)", "dest": "/$1/$2" },
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/index.php", "dest": "/api/index.php" },
+    { "src": "/buat-pengaduan.php", "dest": "/api/buat-pengaduan.php" },
+    { "src": "/daftar-aspirasi.php", "dest": "/api/daftar-aspirasi.php" },
+    { "src": "/statistik.php", "dest": "/api/statistik.php" },
+    { "src": "/(.*)", "dest": "/api/$1" }
+  ]
+}
